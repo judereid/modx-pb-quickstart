@@ -1,0 +1,17 @@
+web1:
+  name: modx
+  shared_writable_dirs:
+    - core/cache
+    - core/export
+  php_extensions:
+    - zlib
+    - json
+    - gd
+    - simplexml
+    - curl
+    - pdo_mysql
+  after_build:
+    - "mv /var/www/pagoda/core/config/config.inc.php /var/www/core/config/config.inc.php"
+
+db1:
+  name: modx-db
